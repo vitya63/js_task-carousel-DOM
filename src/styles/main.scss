@@ -7,3 +7,61 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.carousel {
+  list-style-type: none;
+  padding: 0;
+
+  &__item {
+    display: none;
+    overflow: hidden;
+  }
+
+  &__btn {
+    cursor: pointer;
+    margin: 30px;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #c2c0bf;
+    margin: 15px 5px;
+
+    &_active {
+      background-color: #696765;
+    }
+  }
+}
+
+@keyframes slide-away {
+  from {
+    transform: translate(-310px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translate(310px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
