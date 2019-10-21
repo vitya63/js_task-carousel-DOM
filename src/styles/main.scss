@@ -11,21 +11,27 @@ body {
 .carousel {
   list-style-type: none;
   padding: 0;
-
-  &__item {
-    display: none;
-    overflow: hidden;
-  }
+  margin: 0;
+  display: flex;
+  width: 330px;
+  overflow: hidden;
 
   &__btn {
     cursor: pointer;
-    margin: 30px;
   }
 
   &-container {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__item {
+    margin: 10px;
+    position: relative;
+    right: 0;
+    transition: right 0.5s;
+    animation: scroll-left 0.5s both;
   }
 
   &__dots-wrap {
@@ -38,30 +44,10 @@ body {
     width: 10px;
     border-radius: 10px;
     background-color: #c2c0bf;
-    margin: 15px 5px;
+    margin: 0 5px;
 
     &_active {
       background-color: #696765;
     }
-  }
-}
-
-@keyframes slide-away {
-  from {
-    transform: translate(-310px, 0);
-  }
-
-  to {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translate(310px, 0);
-  }
-
-  to {
-    transform: translate(0, 0);
   }
 }
