@@ -4,6 +4,7 @@ const previousItemBtn = document.querySelector('.carousel__btn_prev');
 const nextItemBtn = document.querySelector('.carousel__btn_next');
 let currentDot = document.querySelector('.carousel__dots-wrap .carousel__dot');
 const style = document.createElement('style');
+document.head.appendChild(style);
 let currentPos = 0;
 
 const nextBtnHandler = () => {
@@ -16,7 +17,6 @@ const nextBtnHandler = () => {
   style.innerHTML = `.carousel__item {
     right: ${currentPos += 330}px;
   }`;
-  document.head.appendChild(style);
 };
 
 const prevBtnHandler = () => {
@@ -29,7 +29,6 @@ const prevBtnHandler = () => {
   style.innerHTML = `.carousel__item {
     right: ${currentPos -= 330}px;
   }`;
-  document.head.appendChild(style);
 };
 
 nextItemBtn.addEventListener('click', nextBtnHandler);
