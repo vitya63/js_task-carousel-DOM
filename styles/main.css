@@ -56,13 +56,15 @@ body {
 
 .carousel {
   list-style-type: none;
-  padding: 0; }
-  .carousel__item {
-    display: none;
-    overflow: hidden; }
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 330px;
+  overflow: hidden; }
   .carousel__btn {
-    cursor: pointer;
-    margin: 30px; }
+    cursor: pointer; }
   .carousel-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -73,6 +75,14 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  .carousel__item {
+    margin: 10px;
+    position: relative;
+    right: 0;
+    -webkit-transition: right 0.5s;
+    transition: right 0.5s;
+    -webkit-animation: scroll-left 0.5s both;
+            animation: scroll-left 0.5s both; }
   .carousel__dots-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -85,40 +95,8 @@ body {
     width: 10px;
     border-radius: 10px;
     background-color: #c2c0bf;
-    margin: 15px 5px; }
+    margin: 0 5px; }
     .carousel__dot_active {
       background-color: #696765; }
-
-@-webkit-keyframes slide-away {
-  from {
-    -webkit-transform: translate(-310px, 0);
-            transform: translate(-310px, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@keyframes slide-away {
-  from {
-    -webkit-transform: translate(-310px, 0);
-            transform: translate(-310px, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@-webkit-keyframes slide-in {
-  from {
-    -webkit-transform: translate(310px, 0);
-            transform: translate(310px, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@keyframes slide-in {
-  from {
-    -webkit-transform: translate(310px, 0);
-            transform: translate(310px, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
 
 /*# sourceMappingURL=main.css.map */
